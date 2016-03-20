@@ -12,7 +12,10 @@ for line in in_file:
 
 print president
 
-with open('private.csv') as csvfile:
+president = []
+
+with open('presidents.txt') as csvfile:
 	reader = csv.reader(csvfile)
 	for row in reader:
-		print ', '.join(row)
+		president.append(row[0])
+		president.append(row[2])
