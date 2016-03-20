@@ -1,3 +1,5 @@
+import csv
+
 in_file = open('presidents.txt')
 out_file = open('output.txt', 'w')
 
@@ -10,8 +12,7 @@ for line in in_file:
 
 print president
 
-import csv
-with open('private.csv', 'rb') as csvfile:
-	f = csv.reader(csvfile, delimiter=',')
-	for row in f:
-		print ', ' .join(row)
+with open('private.csv') as csvfile:
+	reader = csv.reader(csvfile)
+	for row in reader:
+		print ', '.join(row)
