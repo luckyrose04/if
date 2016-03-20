@@ -1,11 +1,11 @@
 import csv
 
-president = []
+presidents = []
 
 with open('presidents.txt') as csvfile:
     reader = csv.reader(csvfile)
-    for row in reader:
-        president.append(row[0])
-        president.append(row[2])
+    for president, _, party in reader:
+        presidents.append(president)
+        presidents.append(party)
 
-print president
+print presidents
