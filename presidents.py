@@ -11,7 +11,7 @@ for line in in_file:
 print president
 
 import csv
-with open('private.csv', 'rb)' as csvfile:
+with open('private.csv', 'rb') as csvfile:
 	f = csv.reader(csvfile, delimiter=',')
 	for row in f:
 		print ', ' .join(row)
