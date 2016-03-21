@@ -9,3 +9,8 @@ with open('presidents.txt') as csvfile:
         presidents.append(party)
 
 print presidents
+
+with open('output.txt', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['president'])
+    writer.writerow(['party'])
