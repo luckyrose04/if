@@ -12,5 +12,4 @@ print presidents
 
 with open('output.txt', 'w') as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(['president'])
-    writer.writerow(['party'])
+    writer.writerow(['president', 'party'])
